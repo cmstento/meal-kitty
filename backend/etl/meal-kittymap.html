@@ -133,6 +133,7 @@
 
       function getNearbyStores(location, radius){
           deleteMarkers()
+          // TODO: Change localhost:8080 to our api's heroku url!!!!!
           url = `http://localhost:8080/stores?latitude=${location.lat}&longitude=${location.lng}&radius=${radius}`
           downloadUrl(url, function(data) {
               var response = JSON.parse(data)
